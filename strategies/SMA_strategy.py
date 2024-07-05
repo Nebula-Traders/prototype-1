@@ -19,16 +19,12 @@ class SMAStrategy(Strategy):
 
                 # Buy
                 self.log("BUY CREATE, %.2f" % self.close[0])
-
-                # Keep track of the created order to avoid a 2nd order
                 self.order = self.buy()
 
         else:
             if self.close[0] < self.sma[0]:
                 # Sell
                 self.log("SELL CREATE, %.2f" % self.close[0])
-
-                # Keep track of the created order to avoid a 2nd order
                 self.order = self.sell()
 
     def __str__():
